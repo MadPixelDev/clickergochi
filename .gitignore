@@ -1,0 +1,14 @@
+node_modules/
+dist/
+coverage/
+playwright-report/
+test-results/
+.vite/
+*.log
+.DS_Store
+.env
+.env.*
+!.env.example
+ios/App/Pods/
+android/.gradle/
+android/app/build/
