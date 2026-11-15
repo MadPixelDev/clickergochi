@@ -1,0 +1,51 @@
+:root {
+  --cream: #fff8f0;
+  --blush: #f9c5d1;
+  --mint: #bfe8d6;
+  --lavender: #d9ccf2;
+  --butter: #fbe7a1;
+  --sky: #bfddf5;
+  --outline: #6b4a3a;
+  --text: #5a4038;
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #fff1e2;
+  color: var(--text);
+  font-family: 'Nunito', 'M PLUS Rounded 1c', system-ui, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: none;
+  overscroll-behavior: none;
+}
+
+#stage,
+#ui {
+  position: fixed;
+  inset: 0;
+}
+
+#stage canvas {
+  display: block;
+}
+
+#ui {
+  pointer-events: none;
+}
+
+#ui button,
+#ui input,
+#ui .interactive {
+  pointer-events: auto;
+}

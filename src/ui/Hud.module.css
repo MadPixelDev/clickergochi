@@ -1,0 +1,102 @@
+.top {
+  position: absolute;
+  top: calc(var(--safe-top) + 14px);
+  left: 16px;
+  right: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 48px;
+  padding: 0 18px 0 12px;
+  border-radius: 24px;
+  background: #fffaf4;
+  border: 3px solid var(--outline);
+  box-shadow: 0 4px 0 rgba(107, 74, 58, 0.18);
+  font-weight: 900;
+  font-size: 22px;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+
+.heart {
+  width: 28px;
+  height: 28px;
+  color: #f28aa6;
+}
+
+.iconButton {
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  border: 3px solid var(--outline);
+  background: #fffaf4;
+  box-shadow: 0 4px 0 rgba(107, 74, 58, 0.18);
+  color: var(--text);
+  font-size: 22px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.combo {
+  position: absolute;
+  top: calc(var(--safe-top) + 84px);
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.25s ease;
+}
+
+.comboBadge {
+  padding: 6px 18px;
+  border-radius: 20px;
+  border: 3px solid var(--outline);
+  font-weight: 900;
+  font-size: 26px;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.comboBadge small {
+  font-size: 16px;
+  font-weight: 800;
+  margin-left: 6px;
+  opacity: 0.8;
+}
+
+.hint {
+  position: absolute;
+  bottom: calc(var(--safe-bottom) + 18%);
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-weight: 800;
+  font-size: 20px;
+  color: var(--text);
+  opacity: 0.75;
+  animation: hint 1.6s ease-in-out infinite;
+}
+
+@keyframes hint {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hint {
+    animation: none;
+  }
+}
